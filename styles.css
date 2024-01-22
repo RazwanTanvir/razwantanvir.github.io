@@ -14,17 +14,33 @@ header {
     font-size: 1.5rem;
 }
 
-section {
-    text-align: left;
-    margin: 2rem;
+nav {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
 }
 
 a {
-    color: #007BFF;
+    color: #fff;
+    text-decoration: none;
 }
 
-#contact {
-    font-family: 'Consolas', monospace;
+.portfolio-section {
+    text-align: left;
+    margin: 2rem;
+    display: none;
 }
 
-/* Add more styles as needed */
+.portfolio-section.active {
+    display: block;
+}
