@@ -23,3 +23,9 @@ function toggleSection(sectionId) {
         targetSection.classList.add("active");
     }
 }
+
+document.getElementById("reveal-phone").addEventListener("click", function() {
+    document.getElementById("phone").classList.remove("hidden");
+    this.style.display = "none";
+});
+
