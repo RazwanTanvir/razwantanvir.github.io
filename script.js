@@ -25,6 +25,8 @@ function toggleSection(sectionId) {
 }
 
 document.getElementById("reveal-phone").addEventListener("click", function() {
+    var phoneElement = document.getElementById("phone");
+    phoneElement.textContent = "+1-254-214-0705";
     document.getElementById("phone").classList.remove("hidden");
     this.style.display = "none";
 });
