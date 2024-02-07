@@ -31,3 +31,33 @@ document.getElementById("reveal-phone").addEventListener("click", function() {
     this.style.display = "none";
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    var skills = document.querySelectorAll(".skill");
+
+    skills.forEach(function (skill) {
+        skill.addEventListener("click", function () {
+            var progress = this.querySelector(".progress");
+            var width = parseInt(progress.style.width) || 0; // Get current width or default to 0
+            var targetWidth = parseInt(progress.dataset.width); // Get target width from data attribute
+            animateProgress(progress, width, targetWidth);
+        });
+    });
+});
+
+function animateProgress(progress, startWidth, targetWidth) {
+    var animationDuration = 1000; // Duration of animation in milliseconds
+    var frameDuration = 1000 / 60; // Duration of each animation frame in milliseconds
+    var frames = animationDuration / frameDuration; // Number of frames
+    var increment = (targetWidth - startWidth) / frames; // Width increment per frame
+
+    var frame = 0;
+    var interval = setInterval(function () {
+        frame++;
+        var newWidth = startWidth + increment * frame;
+        progress.style.width = newWidth + "%";
+
+        if (frame >= frames) {
+            clearInterval(interval);
+        }
+    }, frameDuration);
+}
