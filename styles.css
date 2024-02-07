@@ -67,17 +67,19 @@ h1 {
 }
 
 .skill {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    width: 50%;
+    
 }
 
 .progress-bar {
     background-color: #ddd;
-    height: 20px;
-    border-radius: 10px;
+    height: 10px;
+    border-radius: 5px;
     overflow: hidden;
 }
 
 .progress {
-    height: 50%;
+    height: 100%;
     background-color: #007bff;
 }
