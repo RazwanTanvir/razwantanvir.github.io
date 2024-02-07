@@ -82,4 +82,10 @@ h1 {
 .progress {
     height: 100%;
     background-color: #007bff;
+    animation: fillProgress 1s forwards; 
+}
+
+@keyframes fillProgress {
+    from { width: 0%; }
+    to { width: 90%; } /* Adjust width to match the maximum percentage */
 }
