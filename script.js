@@ -61,3 +61,21 @@ function animateProgress(progress, startWidth, targetWidth) {
         }
     }, frameDuration);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    var viewPdfButtons = document.querySelectorAll(".view-pdf-btn");
+
+    viewPdfButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            var pdfName = this.dataset.pdf;
+            displayPdf(pdfName);
+        });
+    });
+});
+
+function displayPdf(pdfName) {
+    // Logic to display the PDF
+    console.log("Displaying PDF:", pdfName);
+    // Replace the console.log with code to display the PDF in a modal, iframe, or another appropriate method.
+}
+
