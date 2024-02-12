@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     viewPdfButtons.forEach(function (button) {
         button.addEventListener("click", function () {
-            var pdfName = "Scientific-Paper-Peer-Reviewing-System-With-Blockchain-IPFS-and-Smart-Contract (1).pdf" ;  //  this.dataset.pdf;
+            var pdfName = "./Scientific-Paper-Peer-Reviewing-System-With-Blockchain-IPFS-and-Smart-Contract (1).pdf" ;  //  this.dataset.pdf;
             displayPdf(pdfName);
         });
     });
