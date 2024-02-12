@@ -74,8 +74,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function displayPdf(pdfName) {
-    // Logic to display the PDF
-    console.log("Displaying PDF:", pdfName);
-    // Replace the console.log with code to display the PDF in a modal, iframe, or another appropriate method.
+    var iframe = document.createElement("iframe");
+    iframe.src = pdfName;
+    iframe.style.width = "100%";
+    iframe.style.height = "500px";
+    document.body.appendChild(iframe);
 }
 
